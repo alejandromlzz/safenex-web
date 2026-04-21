@@ -12,6 +12,11 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^6.1.8"
+    "@fontsource/ibm-plex-mono": "^5.2.7",
+    "@fontsource/quantico": "^5.2.7",
+    "@fontsource/rajdhani": "^5.2.7",
+    "@tailwindcss/vite": "^4.2.4",
+    "astro": "^6.1.8",
+    "tailwindcss": "^4.2.4"
   }
 }

@@ -1,0 +1,133 @@
+<div class="relative flex items-center justify-center">
+    <div
+        class="absolute w-[240px] h-[240px] rounded-full bg-[radial-gradient(circle,rgba(0,201,167,0.13)_0%,transparent_68%)] pointer-events-none"
+    >
+    </div>
+
+    <svg
+        class="w-[140px] h-[140px] drop-shadow-[0_0_20px_rgba(0,201,167,0.4)] animate-float"
+        viewBox="0 0 140 140"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+    >
+        <path
+            d="M70 12 L112 30 L112 72 C112 96 90 116 70 124 C50 116 28 96 28 72 L28 30 Z"
+            fill="url(#shieldFill)"
+            fill-opacity="0.15"></path>
+        <path
+            d="M70 12 L112 30 L112 72 C112 96 90 116 70 124 C50 116 28 96 28 72 L28 30 Z"
+            stroke="url(#shieldStroke)"
+            stroke-width="2"></path>
+
+        <circle cx="70" cy="55" r="7" fill="url(#nodeGrad)"></circle>
+        <circle cx="46" cy="78" r="5" fill="#00C9A7" opacity="0.8"></circle>
+        <circle cx="94" cy="78" r="5" fill="#0A84FF" opacity="0.8"></circle>
+        <circle cx="70" cy="98" r="5" fill="url(#nodeGrad)" opacity="0.7"
+        ></circle>
+
+        <line
+            x1="70"
+            y1="62"
+            x2="46"
+            y2="74"
+            stroke="#00C9A7"
+            stroke-width="1.5"
+            opacity="0.7"></line>
+        <line
+            x1="70"
+            y1="62"
+            x2="94"
+            y2="74"
+            stroke="#0A84FF"
+            stroke-width="1.5"
+            opacity="0.7"></line>
+        <line
+            x1="46"
+            y1="83"
+            x2="70"
+            y2="93"
+            stroke="#00C9A7"
+            stroke-width="1.5"
+            opacity="0.5"></line>
+        <line
+            x1="94"
+            y1="83"
+            x2="70"
+            y2="93"
+            stroke="#0A84FF"
+            stroke-width="1.5"
+            opacity="0.5"></line>
+
+        <circle
+            cx="70"
+            cy="55"
+            r="7"
+            fill="none"
+            stroke="#00C9A7"
+            stroke-width="1.5"
+            opacity="0.6"
+        >
+            <animate
+                attributeName="r"
+                values="7;16;7"
+                dur="2.8s"
+                repeatCount="indefinite"></animate>
+            <animate
+                attributeName="opacity"
+                values="0.6;0;0.6"
+                dur="2.8s"
+                repeatCount="indefinite"></animate>
+        </circle>
+
+        <defs>
+            <linearGradient
+                id="shieldFill"
+                x1="28"
+                y1="12"
+                x2="112"
+                y2="124"
+                gradientUnits="userSpaceOnUse"
+            >
+                <stop offset="0%" stop-color="#00C9A7"></stop>
+                <stop offset="100%" stop-color="#0A84FF"></stop>
+            </linearGradient>
+            <linearGradient
+                id="shieldStroke"
+                x1="28"
+                y1="12"
+                x2="112"
+                y2="124"
+                gradientUnits="userSpaceOnUse"
+            >
+                <stop offset="0%" stop-color="#00C9A7"></stop>
+                <stop offset="100%" stop-color="#0A84FF"></stop>
+            </linearGradient>
+            <linearGradient
+                id="nodeGrad"
+                x1="63"
+                y1="48"
+                x2="77"
+                y2="62"
+                gradientUnits="userSpaceOnUse"
+            >
+                <stop offset="0%" stop-color="#00C9A7"></stop>
+                <stop offset="100%" stop-color="#0A84FF"></stop>
+            </linearGradient>
+        </defs>
+    </svg>
+</div>
+
+<style>
+    @keyframes float {
+        0%,
+        100% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-9px);
+        }
+    }
+    .animate-float {
+        animation: float 5s ease-in-out infinite;
+    }
+</style>
