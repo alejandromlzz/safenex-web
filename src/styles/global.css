@@ -13,4 +13,65 @@
 @theme {
     --font-raj: "RajdhaniCustom", sans-serif;
     --font-mono: "IBM Plex Mono", monospace;
+
+    --color-teal: #00c9a7;
+    --color-blue-brand: #0a84ff;
+    --color-ink: #020617;
+    --color-navy: #0b1f3a;
+    --color-card: #080f1f;
+    --color-muted: #64748b;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-9px);
+    }
+}
+
+@keyframes fade-blink {
+
+    0%,
+    100% {
+        opacity: 0.3;
+    }
+
+    50% {
+        opacity: 0.8;
+    }
+}
+
+.animate-float {
+    animation: float 5s ease-in-out infinite;
+}
+
+.animate-fade-blink {
+    animation: fade-blink 2s ease-in-out infinite;
+}
+
+:root {
+    color-scheme: dark;
+}
+
+html {
+    font-family: "Onest", system-ui, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    background-color: #020617;
+    color: #e2e8f0;
+    overflow-x: hidden;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
 }
