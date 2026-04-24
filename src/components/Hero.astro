@@ -3,7 +3,8 @@ import LogoAnimado from "../components/LogoAnimado.astro";
 ---
 
 <section
-    class="w-full mx-auto lg:w-[1100px] min-h-[95vh] flex flex-col justify-center px-4 text-center"
+    id="inicio"
+    class="min-h-screen flex flex-col items-center justify-center text-center px-6 pt-24 pb-16 gap-7"
 >
     <div>
         <LogoAnimado />
@@ -65,32 +66,15 @@ import LogoAnimado from "../components/LogoAnimado.astro";
         </div>
     </div>
 
-    <div class="flex flex-wrap justify-center gap-[10px] px-[24px] mb-[56px]">
-        <div
-            class="flex items-center gap-2 bg-[#0b1f3a] border border-[#0a2a44] rounded-full px-[18px] py-[9px] text-white text-[13px] font-semibold tracking-[1px] uppercase transition-all duration-300 ease-out hover:-translate-y-1 hover:border-[#00c9a7]/50 cursor-default"
+    <div class="flex gap-2.5 flex-wrap justify-center">
+        <button
+            class="bg-gradient-to-br from-teal-500 to-blue-500 text-black font-mono text-[11px] cursor-pointer border font-semibold px-[28px] py-[13px] uppercase shadow-[0_0_24px_rgba(0,201,167,0.3)] transition-[transform, box-shadow] duration-200 rounded-[4px] transition-all hover:-translate-y-0.5 hover:shadow-[0_0_36px_rgba(0,201,167,0.5)]"
+            onclick="document.getElementById('pos').scrollIntoView({behavior:'smooth'})"
+            >Ver SafenexPOS</button
         >
-            <span
-                class="w-[6px] h-[6px] rounded-full bg-[#00c9a7] shadow-[0_0_8px_#00c9a7]"
-            ></span>
-            Sistemas de Inventario
-        </div>
-
-        <div
-            class="flex items-center gap-2 bg-[#0b1f3a] border border-[#0a2a44] rounded-full px-[18px] py-[9px] text-white text-[13px] font-semibold tracking-[1px] uppercase transition-all duration-300 ease-out hover:-translate-y-1 hover:border-[#00c9a7]/50 cursor-default"
+        <button
+            class="bg-transparent border border-[rgba(0,201,167,0.35)] text-[#00c9a7] font-mono text-[11px] tracking-[2px] uppercase px-[28px] py-[13px] rounded-[6px] cursor-pointer transition-all hover:-translate-y-0.5 hover:shadow-[0_0_36px_rgba(0,201,167,0.5)]"
+            >Contactarnos</button
         >
-            <span
-                class="w-[6px] h-[6px] rounded-full bg-[#00c9a7] shadow-[0_0_8px_#00c9a7]"
-            ></span>
-            Páginas Web
-        </div>
-
-        <!-- <div
-            class="flex items-center gap-2 bg-[#0b1f3a] border border-[#0a2a44] rounded-full px-[18px] py-[9px] text-white text-[13px] font-semibold tracking-[1px] uppercase transition-all duration-300 ease-out hover:-translate-y-1 hover:border-[#00c9a7]/50 cursor-default"
-        >
-            <span
-                class="w-[6px] h-[6px] rounded-full bg-[#00c9a7] shadow-[0_0_8px_#00c9a7]"
-            ></span> 
-            Equipos Informáticos
-        </div> -->
     </div>
 </section>
