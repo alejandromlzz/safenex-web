@@ -1,0 +1,43 @@
+<svg width="500" height="500" viewBox="0 0 140 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="shieldFill" x1="28" y1="12" x2="112" y2="124" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#00C9A7"/>
+      <stop offset="100%" stop-color="#0A84FF"/>
+    </linearGradient>
+    <linearGradient id="shieldStroke" x1="28" y1="12" x2="112" y2="124" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#00C9A7"/>
+      <stop offset="100%" stop-color="#0A84FF"/>
+    </linearGradient>
+    <linearGradient id="nodeGrad" x1="63" y1="48" x2="77" y2="62" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#00C9A7"/>
+      <stop offset="100%" stop-color="#0A84FF"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Fondo oscuro circular -->
+  <circle cx="70" cy="70" r="70" fill="#060D1A"/>
+
+  <!-- Escudo relleno sutil -->
+  <path d="M70 18 L108 34 L108 70 C108 92 88 110 70 118 C52 110 32 92 32 70 L32 34 Z"
+        fill="url(#shieldFill)" opacity="0.15"/>
+
+  <!-- Escudo borde gradiente -->
+  <path d="M70 18 L108 34 L108 70 C108 92 88 110 70 118 C52 110 32 92 32 70 L32 34 Z"
+        fill="none" stroke="url(#shieldStroke)" stroke-width="2.5"/>
+
+  <!-- Nodo central -->
+  <circle cx="70" cy="54" r="7" fill="url(#nodeGrad)"/>
+
+  <!-- Nodos secundarios -->
+  <circle cx="46" cy="76" r="5" fill="#00C9A7" opacity="0.85"/>
+  <circle cx="94" cy="76" r="5" fill="#0A84FF" opacity="0.85"/>
+  <circle cx="70" cy="96" r="5" fill="#00C9A7" opacity="0.65"/>
+
+  <!-- Líneas de conexión superiores -->
+  <line x1="70" y1="61" x2="46" y2="72" stroke="#00C9A7" stroke-width="1.8" opacity="0.75"/>
+  <line x1="70" y1="61" x2="94" y2="72" stroke="#0A84FF" stroke-width="1.8" opacity="0.75"/>
+
+  <!-- Líneas de conexión inferiores -->
+  <line x1="46" y1="81" x2="70" y2="91" stroke="#00C9A7" stroke-width="1.8" opacity="0.5"/>
+  <line x1="94" y1="81" x2="70" y2="91" stroke="#0A84FF" stroke-width="1.8" opacity="0.5"/>
+</svg>
