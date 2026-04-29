@@ -1,0 +1,136 @@
+<section id="pos" class="py-24 px-6 bg-gradient-to-b from-transparent via-teal/[0.025] to-transparent">
+
+    <p class="font-mono text-[10px] tracking-[5px] uppercase text-teal text-center mb-3">
+        Nuestro sistema principal
+    </p>
+    <h2 class="font-raj text-[clamp(32px,5vw,46px)] tracking-[2px] text-center mb-20">
+        SAFENEX POS
+    </h2>
+
+    <!-- Feature 1: Ventas -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center max-w-5xl mx-auto mb-24">
+        <div>
+            <span class="font-mono text-[9px] tracking-[3px] uppercase text-teal block mb-4">Ventas y facturación</span>
+            <h3 class="font-raj text-[28px] tracking-wide mb-4">Control total de tus ventas</h3>
+            <p class="text-[14px] text-muted leading-relaxed mb-5">
+                Registrá ventas al contado y al crédito, gestioná devoluciones parciales o completas y llevá el historial de cada transacción.
+            </p>
+            <ul class="space-y-2">
+                {["Ventas al contado y al crédito", "Devoluciones parciales y completas", "Comisiones por vendedor", "Historial de transacciones"].map(item => (
+                    <li class="text-[13px] text-muted flex items-center gap-2">
+                        <span class="text-teal text-xs">▸</span> {item}
+                    </li>
+                ))}
+            </ul>
+        </div>
+        <!-- Mockup -->
+        <div class="bg-[#060e1c] border border-teal/20 rounded-xl overflow-hidden shadow-[0_20px_60px_rgba(0,0,0,.6)]">
+            <div class="flex items-center gap-1.5 px-4 py-3 bg-[#0a1628] border-b border-white/5">
+                <span class="w-2.5 h-2.5 rounded-full bg-[#ff5f57]"></span>
+                <span class="w-2.5 h-2.5 rounded-full bg-[#febc2e]"></span>
+                <span class="w-2.5 h-2.5 rounded-full bg-[#28c840]"></span>
+                <span class="font-mono text-[10px] text-slate-600 ml-2">SafenexPOS · Ventas</span>
+            </div>
+            <div class="p-5">
+                <div class="grid grid-cols-2 gap-2 mb-4">
+                    {[
+                        { label: "Venta del día", val: "Gs 2.500.000", color: "#00c9a7" },
+                        { label: "Transacciones", val: "14", color: "#0a84ff" },
+                        { label: "Créditos activos", val: "3", color: "#febc2e" },
+                        { label: "Caja", val: "✓ Abierta", color: "#28c840" },
+                    ].map(item => (
+                        <div class="bg-white/[0.03] border border-white/[0.06] rounded-lg p-3">
+                            <span class="font-mono text-[13px] font-semibold block mb-0.5" style={`color: ${item.color}`}>{item.val}</span>
+                            <span class="font-mono text-[9px] text-slate-500">{item.label}</span>
+                        </div>
+                    ))}
+                </div>
+                <div class="border border-dashed border-teal/20 rounded-lg px-4 py-3 text-center">
+                    <span class="font-mono text-[9px] tracking-[2px] text-teal/40">[ Captura de pantalla — próximamente ]</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Feature 2: Inventario (invertido) -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center max-w-5xl mx-auto mb-24">
+        <!-- Mockup primero en desktop, segundo en mobile -->
+        <div class="order-2 md:order-1 bg-[#060e1c] border border-teal/20 rounded-xl overflow-hidden shadow-[0_20px_60px_rgba(0,0,0,.6)]">
+            <div class="flex items-center gap-1.5 px-4 py-3 bg-[#0a1628] border-b border-white/5">
+                <span class="w-2.5 h-2.5 rounded-full bg-[#ff5f57]"></span>
+                <span class="w-2.5 h-2.5 rounded-full bg-[#febc2e]"></span>
+                <span class="w-2.5 h-2.5 rounded-full bg-[#28c840]"></span>
+                <span class="font-mono text-[10px] text-slate-600 ml-2">SafenexPOS · Inventario</span>
+            </div>
+            <div class="p-5 flex flex-col gap-3">
+                {[100, 75, 100, 55, 80, 100].map((w, i) => (
+                    <div class={`h-2 rounded-full ${i % 2 === 1 ? 'bg-teal/20' : 'bg-white/[0.06]'}`} style={`width: ${w}%`}></div>
+                ))}
+                <div class="border border-dashed border-teal/20 rounded-lg px-4 py-3 text-center mt-1">
+                    <span class="font-mono text-[9px] tracking-[2px] text-teal/40">[ Captura de pantalla — próximamente ]</span>
+                </div>
+            </div>
+        </div>
+        <div class="order-1 md:order-2">
+            <span class="font-mono text-[9px] tracking-[3px] uppercase text-teal block mb-4">Inventario y compras</span>
+            <h3 class="font-raj text-[28px] tracking-wide mb-4">Stock siempre actualizado</h3>
+            <p class="text-[14px] text-muted leading-relaxed mb-5">
+                Gestioná tu inventario en tiempo real. Registrá compras a proveedores, controlá el stock y manejá los pagos en cuotas.
+            </p>
+            <ul class="space-y-2">
+                {["Control de stock por producto", "Compras al contado y al crédito", "Gestión de proveedores", "Pagos de cuotas pendientes"].map(item => (
+                    <li class="text-[13px] text-muted flex items-center gap-2">
+                        <span class="text-teal text-xs">▸</span> {item}
+                    </li>
+                ))}
+            </ul>
+        </div>
+    </div>
+
+    <!-- Feature 3: Caja -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center max-w-5xl mx-auto">
+        <div>
+            <span class="font-mono text-[9px] tracking-[3px] uppercase text-teal block mb-4">Caja y finanzas</span>
+            <h3 class="font-raj text-[28px] tracking-wide mb-4">Caja y banco bajo control</h3>
+            <p class="text-[14px] text-muted leading-relaxed mb-5">
+                Cada venta, compra y movimiento queda registrado. Apertura y cierre de caja, depósitos, extracciones y saldo en tiempo real.
+            </p>
+            <ul class="space-y-2">
+                {["Apertura y cierre de caja", "Movimientos de banco", "Ingresos y egresos automáticos", "Saldo actualizado en tiempo real"].map(item => (
+                    <li class="text-[13px] text-muted flex items-center gap-2">
+                        <span class="text-teal text-xs">▸</span> {item}
+                    </li>
+                ))}
+            </ul>
+        </div>
+        <!-- Mockup -->
+        <div class="bg-[#060e1c] border border-teal/20 rounded-xl overflow-hidden shadow-[0_20px_60px_rgba(0,0,0,.6)]">
+            <div class="flex items-center gap-1.5 px-4 py-3 bg-[#0a1628] border-b border-white/5">
+                <span class="w-2.5 h-2.5 rounded-full bg-[#ff5f57]"></span>
+                <span class="w-2.5 h-2.5 rounded-full bg-[#febc2e]"></span>
+                <span class="w-2.5 h-2.5 rounded-full bg-[#28c840]"></span>
+                <span class="font-mono text-[10px] text-slate-600 ml-2">SafenexPOS · Caja</span>
+            </div>
+            <div class="p-5">
+                <div class="grid grid-cols-2 gap-2 mb-4">
+                    <div class="col-span-2 bg-white/[0.03] border border-white/[0.06] rounded-lg p-3">
+                        <span class="font-mono text-[18px] font-semibold block mb-0.5 text-[#28c840]">Gs 8.750.000</span>
+                        <span class="font-mono text-[9px] text-slate-500">Saldo en caja</span>
+                    </div>
+                    <div class="bg-white/[0.03] border border-white/[0.06] rounded-lg p-3">
+                        <span class="font-mono text-[13px] font-semibold block mb-0.5 text-teal">+Gs 500k</span>
+                        <span class="font-mono text-[9px] text-slate-500">Depósito</span>
+                    </div>
+                    <div class="bg-white/[0.03] border border-white/[0.06] rounded-lg p-3">
+                        <span class="font-mono text-[13px] font-semibold block mb-0.5 text-[#ff5f57]">−Gs 120k</span>
+                        <span class="font-mono text-[9px] text-slate-500">Egreso</span>
+                    </div>
+                </div>
+                <div class="border border-dashed border-teal/20 rounded-lg px-4 py-3 text-center">
+                    <span class="font-mono text-[9px] tracking-[2px] text-teal/40">[ Captura de pantalla — próximamente ]</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>

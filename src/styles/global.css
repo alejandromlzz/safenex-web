@@ -1,7 +1,5 @@
 @import "tailwindcss";
 
-@import "@fontsource/ibm-plex-mono/400.css";
-
 @font-face {
     font-family: 'RajdhaniCustom';
     src: url('/fonts/Rajdhani-Bold.ttf') format('truetype');
@@ -12,7 +10,6 @@
 
 @theme {
     --font-raj: "RajdhaniCustom", sans-serif;
-    --font-mono: "IBM Plex Mono", monospace;
 
     --color-teal: #00c9a7;
     --color-blue-brand: #0a84ff;
